@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- Esta línea declara el tipo de documento HTML que estás utilizando -->
+<html lang="en"> <!-- Abre la etiqueta html y especifica el idioma -->
+<head> <!-- Abre la sección de encabezado del documento -->
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres del documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define la configuración de la vista en dispositivos móviles -->
+    <title>Memorama</title> <!--Nombre de la pasteña de la pagina-->
+    <link rel="stylesheet" href="css/style.css"> <!-- Enlaza la hoja de estilos externa-->
+    <title> Juego de memorama</title> <!--Titulo de la pestaña-->
+</head> <!--Cierre de la cabeza-->
+<body> <!-- Abre la sección de cuerpo del documento -->
+    <main>
+        <section class="section1">   <!-- Sección principal del juego -->
+            <table> <!--Crea una tabla-->
+                <tr>  <!-- Fila para organizar los botones del memorama de manera horizontal-->
+                    <td><button id="0" onclick="destapar(0)"></button></td> <!--Da la funcion para voltear la carta-->
+                    <td><button id="1" onclick="destapar(1)"></button></td> <!--Da la funcion para voltear la carta-->
+                    <td><button id="2" onclick="destapar(2)"></button></td> <!--Da la funcion para voltear la carta-->
+                    <td><button id="3" onclick="destapar(3)"></button></td> <!--Da la funcion para voltear la carta-->
+                </tr> <!--Cierre las filas-->
+                <tr> <!--Nueva final horizontal-->
+                    <td><button id="4" onclick="destapar(4)"></button></td> <!--Da la funcion para voltear la carta en la segunda fila-->
+                    <td><button id="5" onclick="destapar(5)"></button></td> <!--Da la funcion para voltear la carta en la segunda fila-->
+                    <td><button id="6" onclick="destapar(6)"></button></td> <!--Da la funcion para voltear la carta en la segunda fila-->
+                    <td><button id="7" onclick="destapar(7)"></button></td> <!--Da la funcion para voltear la carta en la segunda fila-->
+                </tr> <!--Cierre de las filas-->
+                <tr> <!--Apertura para una tercera fila-->
+                    <td><button id="8" onclick="destapar(8)"></button></td> <!--Da la funcion para voltear la carta en la tercera fila-->
+                    <td><button id="9" onclick="destapar(9)"></button></td> <!--Da la funcion para voltear la carta en la tercera fila-->
+                    <td><button id="10" onclick="destapar(10)"></button></td> <!--Da la funcion para voltear la carta en la tercera fila-->
+                    <td><button id="11" onclick="destapar(11)"></button></td> <!--Da la funcion para voltear la carta en la tercera fila-->
+                </tr> <!--Cierre de la tercera fila-->
+                <tr> <!--Apertura de las ultimas filas-->
+                    <td><button id="12" onclick="destapar(12)"></button></td> <!--Da la funcion para voltear la carta en la cuarta fila-->
+                    <td><button id="13" onclick="destapar(13)"></button></td> <!--Da la funcion para voltear la carta en la cuarta fila-->
+                    <td><button id="14" onclick="destapar(14)"></button></td> <!--Da la funcion para voltear la carta en la cuarta fila-->
+                    <td><button id="15" onclick="destapar(15)"></button></td> <!--Da la funcion para voltear la carta en la cuarta fila-->
+                </tr> <!--Cierre de las filas-->
+            </table> <!--Cierre de las tablas-->
+        </section> <!--Cierre de la seccion-->
+        <section class="section2"> <!-- Sección para mostrar estadísticas del juego -->
+            <h2 id="aciertos" class="estadisticas">Aciertos: 0</h2> <!-- Muestra el número de aciertos -->
+            <h2 id="t-restante" class="estadisticas">Tiempo: 30 segundos</h2> <!-- Muestra el tiempo restante -->
+            <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2> <!-- Muestra el número de movimientos -->
+        </section> <!--Cierre de la seccion-->
+    </main> 
+    <footer>  <!-- Pie de página -->
+        <p> Ayuda ya me quiero morir </p> <!-- Mensaje en el pie de página -->
+    </footer>
+    <script src="scrip/Scrip.js"></script> <!-- Enlace al archivo de script  -->
+</body> <!--Cierre del cuerpo-->
+</html> <!--Fin del codigo-->
+
+

@@ -1,0 +1,153 @@
+*, html { /*/se esta dando estilo a todo el codigo html /*/
+    padding: 0; /*/el relleno /*/
+    margin: 0; /*/se le esta dando el formato y el siseño a la pagina/*/
+    box-sizing: border-box; /*/el tamaño de la caja va a mantenerse estable / */
+    background-color: aqua; /*/el color de fondo /*/
+  } /*/cierre/*/
+  
+  :root { /*/ esta clase es unica de puros colores por lo tanto el doble
+    guin es para definir variables personalizadas/*/
+    --base-color: #8a071d; /*/la base del dibujo */
+    --lighter-base-color: #d9041a; /*/ se esta deficiendo el color /*/
+    --face-color: #95b8bd; /*/ se establece el color en hexadecimal /*/
+    --lighter-face-color: #CAE8ED; /*/se establece el color /*/
+    --border-color: #000000; /*/a cada color se le esta dando un nombre
+    personal para que en las demas clases se pueda mandar a llamar /*/
+  } /*/cierre /*/
+  
+  .body { /*/ primera etiqueta /*/
+    position: relative; /*/ se establece la posicion/*/
+    margin: 100px 150px; /*/ el marguen de arriba y de los lados /*/
+    width: 155px; /*/ el ancho/*/
+    height: 230px; /*/ la altura /*/
+    background-color: var(--base-color); /*/el color de fondo y se manda a llamar
+    con la etiqueta de colores que se personalizo /*/
+    border: 12px solid var(--border-color); /*/el tamaño del borde y su color /*/
+    border-radius: 70px 85px 70px 70px; /*/las dimenciones del borde
+    para hacer curvas /*/
+  } /*/ cierre /*/
+  
+  .body-light-part { /*/ inicio de una clase/*/
+    position: absolute; /*/ se establece la posicion/*/
+    top: 0; /*/ establece el espacio de relleno requerido en la parte 
+    superior del elemento. /*/
+    right: 0; /*/ el lado derecho/*/
+    z-index: 1; /*/ te permite ajustar el orden de las capas de los objetos 
+    cuando el contenido está siendo renderizado/*/
+    width: 95%; /*/ el tamaño de lo ancho/*/
+    height: 90%; /*/ el tamaño de la altura/*/
+    background-color: var(--lighter-base-color); /*/ el color de fondo/*/
+    transform: rotate(-2deg); /*/el grado al que va a rotar/*/
+    border-radius: 40% 50% 36% 30%; /*/ el borde del radio del objeto
+    y se usa para hacer curvas/*/
+  }/*/ fin de la clase/*/
+  
+  .face{ /*/ clase cara y se manda a llamar todo lo que este dentro de esta
+    clase/*/
+    position: absolute; /*/ la posicion de la cara /*/
+    right: -20px; /*/ el lado derecho del objeto/*/
+    top: 25px;/*/ es ek narguen de arriba/*/
+    z-index: 2;/*/ te permite ajustar el orden de las capas de los objetos 
+    cuando el contenido está siendo renderizado/*/
+    background-color: var(--face-color); /*/ se esta viendo el color de fondo pero 
+    para no poner el codigo del color se manda a llamar el que se establecio anterior mente/*/
+    width: 130px; /*/ el relleno/*/
+    height: 90px; /*/ la altura/*/
+    transform: rotate(-4deg); /*/ los grados a los que va a rotar/*/
+    border: 12px solid var(--border-color); /*/ el estilo del borde con su color aisgnado/*/
+    border-radius: 70px 90px 110px 110px; /*/ las medidas para ver que tan curvo se quiere el margen/*/
+  }/*/ cierre/*/
+  
+  .face-light-part { /*/ clase /*/
+    position: relative; /*/ posicion/*/
+    width: 94px; /*/ ancho /*/
+    height: 50px;/*/ altura/*/
+    margin: 0px 12px; /*/ medidas del margen/*/
+    background-color: var(--lighter-face-color);/*/ color del fondo/*/
+    border-radius: 30% 40% 55% 50%; /*/ medidas de las curvas/*/
+    display: inline-block;/*/ Ocupan todo el tamaño del contenido y permite 
+    posicionar más elementos a la derecha/*/
+  }/*/ cierre/*/
+  
+  .shimmer { /*/ clase/*/
+    position: relative; /*/ la posicion/*/
+    margin: 4px 25px;/*/ medidas del margen/*/
+    width: 50px; /*/ lo ancho/*/
+    height: 20px;/*/ la altura/*/
+    background-color: rgb(255, 255, 255); /*/ color del fondo/*/
+    border-radius: 40% 50% 50% 40%;/*/ medidas del borde/*/
+  }/*/ cierre/*/
+  
+  .backpack{ /*/ clase/*/
+    position: absolute; /*/ posicion/*/
+    left: 0; /*/ lado izquierdo/*/
+    top: 65px;/*/ medida de la parte superior/*/
+    width: 50px;/*/ ancho/*/
+    height: 150px;/*/ altura/*/
+    transform: translate(-100%); /*/ medida para ver hacia donde 
+    sera rotado el objeto/*/
+    background-color: var(--base-color); /*/ color de fondo/*/
+    border: 12px solid var(--border-color);/*/ estilo del borde y color
+    del borde/*/
+    border-radius: 40% 0 0 50%; /*/ medidas del borde para que sea curvo/*/
+  }/*/ cierre/*/
+  
+  .backpack-light-part {/*/ clase/*/
+    margin-left: 2px;/*/ el margen del lado izquierdo/*/
+    height: 25px; /*/ la altura/*/
+    width: calc(100% - 2px); /*/ las medidas de lo ancho/*/
+    background-color: var(--lighter-base-color); /*/ el color de fondo/*/
+    border-radius: 50% 0 0 20%;/*/ las medidas del borde/*/
+  }/*/ cierre/*/
+  
+  .leg-left-under { /*/ clase/*/
+    position: absolute; /*/ posicion/*/
+    bottom: 0; /*/establece el espacio requerido en la parte inferior 
+    de un elemento. /*/
+    left: -12px; /*/ el lado izquierdo/*/
+    width: 70px; /*/ medidas de lo ancho/*/
+    height: 60px;/*/ la altura/*/
+    background-color: var(--base-color); /*/ el color de fondo/*/
+    border-left: 12px solid var(--border-color); /*/ el estilo del borde 
+    y su color de fondo/*/
+  }/*/ cierre/*/
+  
+  
+  .leg-left {/*/ clase/*/
+    position: absolute; /*/ posicion/*/
+    bottom: 0; /*/ establece el espacio requerido en la parte 
+    inferior de un elemento. /*/
+    left: -12px;/*/ el lado izquierdo/*/
+    width: 65px;/*/ medidas de lo ancho/*/
+    height: 55px;/*/ medidas de la antura/*/
+    transform: translateY(55px); /*/ esta rotando el elemento/*/
+    background-color: var(--base-color);/*/ el color de fondo/*/
+    border: 12px solid var(--border-color);/*/ estilo del borde y su color/*/
+    border-top: none;/*/ el borde de la parte inferior/*/
+    border-radius: 0 0 40% 60%; /*/ el radio del borde para hacer que sea curvo/*/
+  }/*/ cierre/*/
+  
+  .leg-right-under { /*/ penultima clase/*/
+    position: absolute; /*/ posicion/*/ 
+    bottom: -4px; /*/ establece el espacio requerido de la parte
+    inferior de un elemento /*/
+    left: 70px; /*/ el lado izquierdo/*/
+    width: 65px; /*/ lo ancho de del elemento/*/ 
+    height: 32px;/*/ la altura/*/
+    background-color: var(--base-color); /*/ el fondo de color /*/
+    border-right: 12px solid var(--border-color); /*/ el estilo del borde y su color/*/
+  } /*/ cierre /*/
+  
+  .leg-right { /*/ ultima clase/*/
+    position: absolute; /*/ posicion/*/
+    bottom: -50px; /*/ establece el espacio requerido de la
+    parte inferior de un elemento/*/
+    left: 70px; /*/ lado izquierdo/*/
+    width: 65px; /*/ el ancho del elemento /*/
+    height: 50px; /*/ la altura /*/
+    background-color: var(--base-color); /*/ el color de fondo/*/
+    border: 12px solid var(--border-color); /*/ el estilo del borde
+    y su color/*/
+    border-top: none;/*/ el borde de la parte inferior/*/
+    border-radius: 0 0 40% 60%; /*/ medidas del borde/*/
+  } /*/ cierre/*/

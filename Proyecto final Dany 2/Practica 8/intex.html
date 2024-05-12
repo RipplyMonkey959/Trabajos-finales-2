@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Se utiliza para especificar la version de html que se esta 
+  utilizando en la construccion de la pagina-->
+<head> <!-- cabeza de la pagina-->
+    
+    <title>dibujo among us</title><!-- titulo de la pestaña-->
+    <link rel="stylesheet" href="style.css"> <!-- relacion con css-->
+    <script src="java.js"></script>
+</head> <!-- cierre de la cabeza-->
+<body> <!-- cuerpo de la pagina-->
+    <div> <!--divisor, para este dibujo se haran tres divisores diferentes
+      por cada parte del cuerpp-->
+        <div class="body"> <!--primerfa clase del dibujo-->
+          <div class="body-light-part"></div> <!-- a pesar de que el
+          nombre sea similar mientras tenga un una palabra con mayusculas
+        o un numero se considera una etiqueta nueva-->
+          <div class="face"> <!-- clase de cara-->
+            <div class="face-light-part"> <!---->
+              <div class="shimmer"></div> <!--a pesar de que el
+                nombre sea similar mientras tenga un una palabra con mayusculas
+              o un numero se considera una etiqueta nueva-->
+            </div> <!--cierre del primer divisor-->
+          </div> <!-- cierre de un divisor-->
+          <div class="backpack"> <!-- apertura de otro divisor 
+          nombrando una clase-->
+            <div class="backpack-light-part"></div> <!--otra clase-->
+          </div><!-- cierre de un divisor-->
+          <div class="leg-left-under"></div> <!--nuevos divisores pero para
+          la parte inferior del dibujo-->
+          <div class="leg-left"></div> <!--clase de la parte inferior-->
+          <div class="leg-right-under"></div> <!--penultima clase-->
+          <div class="leg-right"></div> <!-- ultima clase-->
+        </div><!-- cierre del dovisor-->
+      </div> <!-- cierre del divisor-->
+      <input type="button" id="guardar" value="Guardar como PDF" onclick='generatePDF()'/><!--Input tipo boton es un boton al que se le asigna alguna acción-->
+        <br> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script> <!-- Se incluye la biblioteca jsPDF para generar archivos PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- Se incluye la biblioteca html2pdf.js para convertir HTML a PDF -->
+    <script src="java.js"></script> <!--Extencion para que el HTML se conecte con JAVA -->
+</body> <!-- cierre del cuerpo-->
+</html> <!--cierre del codigo-->

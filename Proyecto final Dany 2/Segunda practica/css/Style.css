@@ -1,0 +1,149 @@
+*{ /* Seleccion todos los elementos en el documento */
+    margin: 0; /* Establece el margen de todos los elementos en 0 */
+    padding: 0; /*Establece el relleno de todos los elementos en 0 */
+    box-sizing: border-box; /*Establece el modelo de caja de todos los elementos */
+}
+body{ /*Selecciona los elementos que esten dentro del body del codigo */
+display: flex; /*Permite un fácil control del diseño y el alineamiento de los elementos  */
+justify-content: center; /* se utiliza en contenedores flexibles para alinear sus elementos 
+secundarios, horizontalmente y centrarlos dentro del contenedor a lo largo del eje principal.*/
+align-items: center;  /*Se utiliza en contenedores flexibles para controlar cómo se alinean los 
+elementos secundarios en el eje transversal */
+min-height: 100vh; /* el vh es la altura de la ventana grafica */
+background: #222; /* color del fondo del cuerpo */
+} /* cierre */
+body.on { /* el .on se utiliza como un método para adjuntar controladores de eventos 
+    a elementos del DOM.*/
+    background: radial-gradient(#555, #111); /* un efecto de transición de color que se 
+    extiende desde un punto central hacia afuera en todas las direcciones */
+}
+.bulb { /*Selecciona todos los elementos que esten dentro de la clase bulb */
+    position: relative; /* Se establece la posicion */
+    width: 80px; /* SE establece lo ancho */
+    height: 80px; /*Se establce lo largo */
+    background: #444; /* El color de fondo */
+    border-radius: 50%; /* Se establece el borde */
+    z-index: 2; /*  se utiliza para controlar el orden de apilamiento de elementos 
+    posicionados en un diseño de página web */
+}
+body.on .bulb { /* afecta a las clases que esten dentro*/
+    background: #fff; /*Color del fondo */
+    box-shadow: 0 0 50px #fff, /* el contorno de color*/
+    0 0 100px #fff, /*Establece una serie de sombras alrededor de los elementos seleccionados */
+    0 0 150px #fff, /*Establece una serie de sombras alrededor de los elementos seleccionados */
+    0 0 200px #fff, /*Establece una serie de sombras alrededor de los elementos seleccionados */
+    0 0 250px #fff, /* Establece una serie de sombras alrededor de los elementos seleccionados */
+    0 0 300px #fff, /*Establece una serie de sombras alrededor de los elementos seleccionados */
+    0 0 300px #fff; /* Establece una serie de sombras alrededor de los elementos seleccionados */
+
+}
+.bulb::before { /* el ::before indica que se están seleccionando pseudo-elementos que están 
+    antes del contenido real de un elemento HTML, respectivamente.*/ 
+    content: ''; /* Esta línea crea un pseudo-elemento que se inserta antes del contenido del elemento 
+    seleccionado  */
+    position: absolute; /* Establece la posición como absoluta */
+    left: 22.5px; /*Define la distancia entre el borde izquierdo */
+    top: -50px; /*Establece la distancia entre la parte superior del elemento y la parte superior del elemento padre */
+    width: 35px; /* Lo ancho del elemento */
+    height: 80px; /* La altura del elemento */
+    background: #444; /*El color del fondo */
+    border-top: 30px solid #000; /* Crea un borde superior en elelemento con un grosor de 30 píxeles y un color negro */
+    border-radius: 10px; /* Redeondea las esquinas de un borde */
+}
+body.on .bulb::before { /* Selecciona el elemento ::before que está dentro de un elemento body con la clase "on" y tiene la clase "bulb. */
+    background: #fff; /* El color del fondo */
+}
+body.on .bulb::after { /* el ::after indica que se están seleccionando pseudo-elementos que están 
+    después del contenido real de un elemento HTML, respectivamente*/
+content: ''; /* se está indicando que el pseudo-elemento no generará ningún contenido adicional*/
+position: absolute; /* La posicion del elemento*/
+top: 50%;  /* La posicion de la altura*/
+left: 50%; /* La posion del lado izquierdo*/
+transform: translate(-50%,-50%); /* se utiliza para mover un elemento a lo largo de los ejes 
+X e Y en el plano de visualización*/
+width: 120px; /*Define lo ancho del elemento */
+height: 120px; /* Define la altura*/
+background: #fff; /* El color del fondo */
+border-radius: 50%; /* El borde */
+filter: blur(40px);/* es para desenfocar un objeto y se puede desenfocar en medidas*/
+}
+.bulb span:nth-child(1) { /* se utiliza para seleccionar el primer elemento <span> que 
+    sea un hijo directo de su contenedor padre.*/
+position: absolute; /* Define la posision*/
+top: -16px; /* La altura*/
+left: -4px; /* El lado izquierdo*/
+display: block; /*Permite un fácil control del diseño y el alineamiento de los elementos  */
+width: 30px; /* Lo ancho*/
+height: 30px; /* La altura*/
+background: transparent; /* Establece el fondo del elemento al que sera transparente*/
+transform: rotate(342deg); /* Rota el elemento al que se aplica esta regla 342 grados*/
+border-bottom-right-radius: 40px; /* Establece el radio de borde inferior derecho del elemento*/
+box-shadow: 20px 20px 0 10px #444; /* Aplica una sombra al elemento*/
+}
+body.on .bulb span:nth-child(1){ /* Selecciona el span del  elemento con la clase "bulb" que está dentro
+     del body con la clase "on". */
+box-shadow: 20px 20px 0 10px #fff; /* Cambia la sombra*/
+}
+.bulb span:nth-child(2) { /* Selecciona el segundo span del elemento con la clase "bulb".*/
+    position: absolute; /* Define la posision*/
+    top: -16px; /* Establce que tan arriba o abajo se quiere el elemento*/
+    right: -4px; /* Establece la posion del lado derecho*/
+    display: block; /* Se utiliza para cambiar un elemento a un elemento de bloque */
+    width: 30px; /* Establce la altura*/
+    height: 30px; /* Establce la altura*/
+    background: transparent; /*Establce el fondo y sera transparente*/
+    transform: rotate(14deg); /* Rota el elemento al que se aplica esta regla 14 grados*/
+    border-bottom-left-radius: 40px; /* Establece el radio de borde inferior derecho del elemento*/
+    box-shadow: -20px 20px 0 10px #444; /* Aplica la sombre al elemento*/
+    }
+    body.on .bulb span:nth-child(2){ /* Selecciona el segundo span del elemento con la clase "bulb" que está dentro del body con la clase "on"*/
+    box-shadow: -20px 20px 0 10px #fff; /* Cambia la sombra del segundo span para que sea de color blanco */
+        } /*Cierre*/
+.cable { /* Se trabajara con la clase cable*/
+    position: absolute; /* Se establce la posicion*/
+    left: calc(50% - 2px); /*Establece la posición horizontal del elemento en la mitad del contenedor*/
+    bottom: 50%; /* Establece la posición vertical del elemento*/
+    width: 4px; /* Establce lo ancho del elemento*/
+    height: 60vh; /* Establce la altura*/
+    background: #000; /* El color de fondo de la clase*/
+    z-index: 1; /* determina qué elemento se muestra encima de otros cuando se superponen*/
+} /* Cierre*/
+.switch {
+    position: absolute; /* Establece la posicion*/
+    bottom: 50px; /* Establece la posición vertical del elemento*/
+    right: 50px; /* Establce la posicion de lado derecho */
+    width: 80px; /* Establce lo ancho*/
+    height: 80px; /* Establce la altura*/
+    background: linear-gradient(#eee, #ccc, #eee); /* se utiliza para crear un
+     fondo degradado lineal en un elemento HTML*/
+    border: 3px solid #000;
+    border-radius: 10px; /* Establce el borde*/
+    display: flex; /*Permite un fácil control del diseño y el alineamiento de los elementos  */
+    justify-content: center; /*  se utiliza en contenedores flexibles para alinear 
+    los elementos secundarios */
+    align-items: center; /*Se utiliza en contenedores flexibles para controlar cómo se alinean los 
+    elementos secundarios en el eje transversal */
+} /* Cierre*/
+.switch .btn { /* Se va a trabajar con la clase*/
+    position: relative; /* Establece la posicion*/
+    width: 25px; /* Establce lo ancho*/
+    height: 40px; /* Establece la altura */
+    background:linear-gradient(#fff, #fff, #777); /* Establece el fondo del elemento mediante un degradado lineal*/
+    border-radius: 6px; /* Establece el radio de borde del elemento */
+    border: 2px solid #000; /* Establece un borde alrededor del elemento y un color*/
+    cursor: pointer; /* Cambia el cursor del mouse cuando se coloca sobre el elemento, indicando que el elemento es 
+    interactivo y puede ser clicado */
+} /* cierre*/
+.switch .btn::before { /* Selecciona la clase*/
+    content: ''; /* Establece el contenido del elemento como vacío*/
+    position: absolute; /* Establce la posicion */
+    top: 0; /* Posiciona el elemento en la esquina superior izquierda*/
+    left: 0; /* Posiciona el elemento en la esquina izquierda*/
+    width: 100%; /* Establce la anchura del elemento*/
+    height: 85%; /* Establce la altura del elemento*/
+    background:linear-gradient(#fff, #fff);  /* Establece el fondo del elemento mediante un degradado*/
+    border-radius: 4px; /* Modifica el borde del elemento*/
+} /* Cierre*/
+.on .switch .btn::before { /* Se trabaja con la clase*/
+    top: 15%; /* Se establce la posicion hacia arriba*/
+} /* cierre*/

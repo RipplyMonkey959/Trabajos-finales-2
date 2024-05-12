@@ -1,0 +1,33 @@
+<!DOCTYPE html> <!--Declara el tipo de documento-->
+<html lang="en"> <!--Abre el elemento raíz  y 
+    establece el atributo de idioma en  para inglés.-->
+<head> <!--Abre la sección del encabezado de la página-->
+    <meta charset="UTF-8"> <!--Especifica la codificación de caracteres del documento como UTF-8, 
+        que admite una amplia gama de caracteres.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Establece la configuración de la 
+        vista del portapapeles de la página para dispositivos móviles-->
+    <title>practica3</title> <!-- Titulo de la pesteña para la pagina-->
+</head> <!--Cierre de la etiqueta cabeza-->
+<body> <!--Abre la sección del cuerpo de la página-->
+    <h2> modificar estilos</h2> <!-- encabezado-->
+    <p id="demo"> Modificar desde JS</p> <!--Crea un párrafo con el atributo de identificación 
+         establecido como demo-->
+     <!-- Botón para cambiar el tamaño del párrafo --><button type="button"  
+    onclick="document.getElementById('demo').style.fontSize='35px'"> <!-- Texto dentro del botón -->
+cambiar tamaño del parrafo
+</button> <!-- Cierre del boton-->
+<!-- Botón para ocultar el párrafo --><button type="button"
+onclick="document.getElementById('demo').style.display='none'"> <!-- Texto dentro del botón -->
+ocultalo
+</button> <!--Cierre del boton-->
+<!-- Encabezado para mostrar el resultado --><h3 id="resultado"> resultado</h3>
+<!-- Botón para mostrar el resultado de la suma --> <button type="button"
+onclick="document.getElementById('resultado').innerHTML=suma"> resultado
+ <!-- Script para calcular la suma --> <script id='suma'>  // Variables para realizar la suma
+    let x=6.69; 
+    let y=40.174;
+    let suma=x+y;   // Calcular la suma de las variables
+</script> <!-- Cierre dle script-->
+</button> <!-- Cierre del boton-->
+</body> <!-- Cierre del cuerpo-->
+</html> <!-- Cierre del codigo-->

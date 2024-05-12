@@ -1,0 +1,31 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento -->
+<html lang="es"> <!-- Inicio de la etiqueta html con especificación de idioma -->
+<head> <!--La cabeza del codigo-->
+    <meta charset="UTF-8"> <!-- Especificación de la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Configuración de la vista en dispositivos móviles -->
+    <title>Formulario</title> <!-- Título de la página -->
+</head> <!--Cierre de la cabeza-->
+
+<body> <!--Etiqueta del cuerpo del codigo-->
+    <form id="myForm"> <!-- Inicio del formulario con un identificador -->
+        <label for="fname">Nombre: </label><br /> <!-- Etiqueta de nombre con un campo de entrada de texto -->
+        <input type="text" id="fname" name="fname" required /> <br /> <!-- Campo de entrada de texto para el nombre -->
+        <br /> <!-- Salto de línea -->
+        <label for="lname">Apellido: </label><br /> <!-- Etiqueta de apellido con un campo de entrada de texto -->
+        <input type="text" id="lname" name="lname" required /> <br /> <!-- Campo de entrada de texto para el apellido -->
+        <label for="email">Correo Electrónico: </label><br /> <!-- Etiqueta de correo electrónico con un campo de entrada de correo electrónico -->
+        <input type="email" id="email" name="email" required /> <br /> <!-- Campo de entrada de correo electrónico -->
+        <label for="rfc">Registro Federal de Contribuyentes: </label><br /> <!-- Etiqueta de RFC con un campo de entrada de texto -->
+        <input type="text" id="rfc" name="rfc" required /> <br /> <!-- Campo de entrada de texto para el RFC -->
+        <br /> <!-- Cierre del salto de línea -->
+        <input type="button" value="Guardar como PDF" onclick="generatePDF()" /> <!-- Botón para guardar el formulario como PDF -->
+        <button onclick="agregarElemento()">Agrega un elemento</button> <!-- Botón para agregar un elemento al formulario -->
+    </form> <!--Cierre de la etiqueta del formulario-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"> </script>     <!-- Inclusión de la librería jsPDF para generar PDFs -->
+    <script src="script.js"></script> <!-- Etiqueta para conectar el html con java-->
+
+</body> <!--cierre del cuerpo-->
+
+</html> <!--Fin del codigo-->
+

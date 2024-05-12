@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!--Esta línea declara que el documento es de tipo HTML5.-->
+<html lang="en"> <!--Abre la etiqueta html-->
+<head> <!--Inicia la sección del encabezado del documento-->
+    <meta charset="UTF-8"> <!-- es una codificación de caracteres Unicode que puede representar la mayoría de los caracteres del mundo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Define la configuración de la vista del portapapeles 
+        del documento para dispositivos móviles-->
+    <title>Trabajo memorama
+    </title> <!--Nombre de la pagina de internet-->
+    <style> /* Etiqueta para los estilos */
+        .card { /* Estilos para las tarjetas */
+            width: 300px; /* Tamaño de lo anchi*/
+            height: 300px; /* Tamaño de lo largo */
+            position: relative; /* Posicion de las cartas */
+            perspective: 1000px; /* Perspectiva para el efecto 3D */
+            margin: 10px; /* Tamaño del margen */
+            margin-left: auto; /* Margen del lado izquierdo */
+            margin-right: auto;  /* Margen del lado derecho */
+        } /* Cierre*/
+        .card-content { /* Clase nueva */
+            width: 100%; /* Tamaño de lo anchi */
+            height: 100%; /* Tamaño de lo ancho*/
+            position: absolute; /* Posicion */
+            transform-style: preserve-3d;   /* Estilo de transformación 3D */
+            transition: transform 1s; /* Transición para animar la rotación */
+        } /* Cierre*/
+        .card.flipped .card-content { /* Se trabaja en una clase*/
+            transform: rotateY(180deg);   /* Rotación 3D */
+        } /* Cierre */
+        .card-face { /* Se trabaja en otra clase */
+            width: 100%; /* Tamaño de lo ancho*/
+            height: 100%; /* Tamaño de lo largo*/
+            position: absolute; /* Posicion*/
+            backface-visibility: hidden; /* Visibilidad de la cara trasera */
+        } /* Cierre */
+        .card-front {
+            background: url(img/fornite.jpg) ;   /* Fondo de la tarjeta */
+            background-size: cover;
+        } /* Cierre*/
+        .card-front2 {
+            background: url(img/fondo.jpg) ; /* Fondo de la tarjeta */
+            background-size: cover;
+        } /* Cierre */
+        .card-front3 {
+            background: url(img/V.jpg) ; /* Fondo de la tarjeta */
+            background-size: cover;
+        } /* Cierre */
+        .card-back{
+            background: lightblue; /* Fondo */
+            transform: rotateY(180deg);   /* Rotación 3D */
+            display: flex; /*  establece un contenedor como un contenedor flexible*/
+            justify-content: center; /*se utiliza para alinear horizontalmente los elementos 
+            secundarios dentro del contenedor flexible*/
+            align-items: center; /* se utiliza para alinear verticalmente los elementos 
+            secundarios dentro del contenedor flexible*/
+        } /* Cierre */
+    </style> <!--Cierre de la etiqueta estilo-->
+</head>
+<body>
+    <div class="card"> <!-- Divisor -->
+        <div class="card-content"> <!--Clase-->
+        <div class="card-face card-front"></div> <!--Clase-->
+        <div class="card-face card-back"> texto</div> <!--Clase con texto a dentro-->
+    </div> <!--cierre del divisor-->
+    </div> <!--cierre del divisor-->
+    <div class="card"> <!-- Divisor -->
+        <div class="card-content"> <!--Clase -->
+        <div class="card-face card-front2"></div> <!--Clase -->
+        <div class="card-face card-back"> texto2</div> <!--Clase con texto a dentro-->
+        </div> <!-- Cierre del divisor-->
+    </div> <!--Cierre del divisor-->
+    <div class="card"> <!--Divisor-->
+        <div class="card-content"> <!--Clase-->
+        <div class="card-face card-front3"></div> <!--Clase-->
+        <div class="card-face card-back"> texto3</div> <!--Clase con texto a dentro-->
+        </div> <!--Cierre del divisor-->
+    </div> <!--Cierre del divisor-->
+<script> // Apertura del scrip
+    var cards = document.querySelectorAll('.card'); // Selecciona todos los elementos con la clase 'card' y los almacena en la variable 'cards'
+    cards.forEach(function(card) { // Itera sobre cada tarjet
+    card.addEventListener('click', function(){  // Agrega un evento de clic a cada tarjeta
+        card.classList.toggle('flipped');  // Alterna la clase 'flipped' en la tarjeta actual cuando se hace clic en ella
+    }); //Fin
+    }); //Cierre
+</script> <!--Cierre del script-->
+  
+</body> <!--Cierre del body-->
+</html> <!--Fin del codigo-->

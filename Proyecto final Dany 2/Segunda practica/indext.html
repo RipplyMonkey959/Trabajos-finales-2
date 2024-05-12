@@ -1,0 +1,34 @@
+<!DOCTYPE html> <!-- Esta línea declara el tipo de documento como HTML5.-->
+<html lang="en"> <!--Abre la etiqueta HTML y establece el atributo de idioma en para inglés.-->
+<head> <!-- Abre la sección del encabezado de la página html-->
+    <meta charset="UTF-8"> <!--Establece la codificación de caracteres del documento-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Define la configuración 
+        de la vista del portapapeles de la página para dispositivos móviles -->
+
+    <title>segunda practica</title> <!-- Nombre de la pagina-->
+    <link rel="stylesheet" href="css/Style.css"> <!--enlaza la carpeta con el style -->
+</head> <!-- cierre de la seccion-->
+<body> <!--Abre la sección del cuerpo de la página-->
+    <div class="light"> <!--clase llama light-->
+        <div class="cable"></div> <!--Segunda clase-->
+    <div class="bulb"> <!-- Tercera clase-->
+        <span></span> <!-- elemento de línea utilizado para aplicar estilos 
+            o modificar partes de texto dentro del documento HTML sin afectar 
+            su estructura.-->
+    </div> <!--cierre del divisor-->
+    <div class="switch"> <!--Nuevo divisor-->
+    <div class="btn"></div> <!-- Divisor con su clase-->
+    </div> <!--Cierre del divisor-->
+    </div> <!--Cierre del divisor-->
+    <script> /* se utiliza para incrustar código JavaScript en un documento HTML*/
+        let btn = document.querySelector('.btn'); /*se utiliza para declarar variables 
+        locales con un alcance de bloque*/
+        let body = document.querySelector('body'); /* el document.querySelector sirve para 
+        seleccionar un elemento en un documento HTML utilizando un selector CSS. */
+        btn.onclick = function(){
+            body.classList.toggle('on'); /* el classList.toggle sirve para alternar la 
+            presencia de una clase en un elemento HTML */
+        }
+    </script> <!-- Cierre de la etiqueta script-->
+</body> <!--Cierre del cuerpo-->
+</html> <!-- Cierre del codigo-->

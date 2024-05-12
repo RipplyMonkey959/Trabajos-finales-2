@@ -1,0 +1,14 @@
+body { /* Estilos para el cuerpo del documento */
+    text-align: center; /* Alinea el texto al centro */
+} /*Cierre */
+p{ /* Estilos para los párrafos */
+    padding: 1.5rem; /* Añade un espacio interno de 1.5 rem */
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+} /*Cierre*/
+input{ /* Estilos para los inputs */
+    background-color: steelblue; /* Color de fondo del input */
+    color: white; /* Color del texto dentro del input */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el input */
+    margin: 0.5rem auto; /* Margen superior e inferior de 0.5rem, margen izquierdo y derecho automáticos */
+    padding: 0.3rem; /* Espacio interno de 0.3 rem */
+} /*Cierre*/

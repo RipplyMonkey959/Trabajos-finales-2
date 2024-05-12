@@ -1,0 +1,11 @@
+body{ /* Se esta trabajando con el elemento body */
+    z-index: -1; /* Establece la posición en el eje Z del cuerpo del documento como detrás de otros elementos */
+} /* Cierre del body*/
+#MyCanvas{
+    width: 60%; /* Establece el ancho del canvas al 60% del ancho del contenedor padre */
+    height: 100%; /* Establece la altura del canvas al 100% de la altura del contenedor padre */
+    border: 1px solid #000; /* Establece un borde de 1 píxel sólido de color negro alrededor del canvas */
+    margin-left: 20%; /* Establece un margen izquierdo del 20% del ancho del contenedor padre */
+    position: absolute; /* Establece la posición del canvas de forma absoluta con respecto a su primer ancestro posicionado */
+    text-align: center; /* Alinea el contenido del canvas al centro */
+} /* Cierre*/

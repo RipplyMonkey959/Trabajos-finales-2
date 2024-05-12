@@ -1,0 +1,202 @@
+* {
+  margin: 0; /* Se establece el margen de todos los elementos en 0 */
+  box-sizing: border-box; /* Se incluyen el padding y el borde en el ancho y alto de los elementos */
+}
+
+.sky { /* Estilos para el cielo */
+  position: absolute; /* Se posiciona de forma absoluta */
+  top: -40%; /* Se ajusta la posición vertical */
+  width: 100%; /* Se establece el ancho al 100% */
+  height: 100%; /* Se establece la altura al 100% */
+  background-color: #390bd2; /* Se establece el color de fondo */
+  overflow: hidden; /* Se oculta el contenido que desborda */
+  z-index: -1; /* Se establece el índice z para colocarlo detrás de otros elementos */
+}
+
+.cloud { /* Estilos para las nubes */
+  position: absolute; /* Se posiciona de forma absoluta */
+  background-color: #FFFFFF; /* Se establece el color de fondo */
+  border-radius: 50%; /* Se establece el radio de borde para hacer las nubes más redondeadas */
+  animation: moveCloud linear infinite; /* Se aplica la animación para mover las nubes */
+}
+
+.cloud:nth-child(1) {
+  width: 150px; /* Se establece el ancho */
+  height: 80px; /* Se establece la altura */
+  top: 50%; /* Se ajusta la posición vertical */
+  left: 40%; /* Se ajusta la posición horizontal */
+  animation-duration: 5s; /* Se establece la duración de la animación */
+}
+
+.cloud:nth-child(2) {
+  width: 120px; /* Se establece el ancho */
+  height: 60px; /* Se establece la altura */
+  top: 40%; /* Se ajusta la posición vertical */
+  left: -2%; /* Se ajusta la posición horizontal */
+  animation-duration: 5s; /* Se establece la duración de la animación */
+}
+
+.cloud:nth-child(3) {
+  width: 180px; /* Se establece el ancho */
+  height: 90px; /* Se establece la altura */
+  top: 50%; /* Se ajusta la posición vertical */
+  left: -2%; /* Se ajusta la posición horizontal */
+  animation-duration: 5s; /* Se establece la duración de la animación */
+}
+
+.cloud:nth-child(4) {
+  width: 180px; /* Se establece el ancho */
+  height: 90px; /* Se establece la altura */
+  top: 80%; /* Se ajusta la posición vertical */
+  left: 20%; /* Se ajusta la posición horizontal */
+  animation-duration: 5s; /* Se establece la duración de la animación */
+}
+
+@keyframes moveCloud {
+  to {
+      transform: translateX(500%); /* Se anima el desplazamiento horizontal */
+  }
+}
+
+.kirby { /* Estilos para Kirby */
+  margin: 60px auto; /* Se establece el margen superior e inferior y se auto-centra horizontalmente */
+  width: 250px; /* Se establece el ancho */
+  height: 250px; /* Se establece la altura */
+  background-color: #f38da4; /* Se establece el color de fondo */
+  border-radius: 50%; /* Se establece el radio de borde para hacer a Kirby más redondeado */
+  border: 5px solid; /* Se establece el borde con un ancho de 5px y sólido */
+  position: relative; /* Se establece la posición relativa para permitir el posicionamiento de los elementos secundarios */
+}
+
+.eye { /* Estilos del ojo */
+  position: absolute; /* Se posiciona de forma absoluta */
+  top: 51px; /* Se ajusta la posición vertical */
+  left: 65px; /* Se ajusta la posición horizontal */
+  width: 37px; /* Se establece el ancho */
+  height: 80px; /* Se establece la altura */
+  background-color: #004889; /* Se establece el color de fondo */
+  border-radius: 50%; /* Se establece el radio de borde para hacer más redondeado */
+  border: 5px solid; /* Se establece el borde con un ancho de 5px y sólido */
+}
+
+.eye-r { /*Estilo del otro ojo */
+  left: initial; /* Se restablece la posición horizontal */
+  right: 65px; /* Se ajusta la posición horizontal */
+}
+
+.pupil {
+  position: absolute; /* Se posiciona de forma absoluta */
+  border-radius: 50%; /* Se establece el radio de borde para hacer más redondeado */
+  left: -1px; /* Se ajusta la posición horizontal */
+  right: -1px; /* Se ajusta la posición horizontal */
+  top: 0; /* Se ajusta la posición vertical */
+  bottom: 20px; /* Se ajusta la posición vertical */
+  background-color: #000; /* Se establece el color de fondo */
+  box-shadow: 0 10px #002662; /* Se aplica una sombra */
+}
+
+.pupil::before {
+  content: ""; /* Se agrega contenido pseudo-elemento */
+  position: absolute; /* Se posiciona de forma absoluta */
+  left: 18%; /* Se ajusta la posición horizontal */
+  transform: traslate(-50%); /* Se corrige la posición horizontal */
+  width: 20px; /* Se establece el ancho */
+  height: 30px; /* Se establece la altura */
+  border-radius: 50%; /* Se establece el radio de borde para hacer más redondeado */
+  background-color: #fff; /* Se establece el color de fondo */
+}
+
+.blush {
+  position: absolute; /* Se posiciona de forma absoluta */
+  top: 128px; /* Se ajusta la posición vertical */
+  left: 22px; /* Se ajusta la posición horizontal */
+  width: 50px; /* Se establece el ancho */
+  height: 25px; /* Se establece la altura */
+  background-color: #f2727f; /* Se establece el color de fondo */
+  border-radius: 50%; /* Se establece el radio de borde para hacer más redondeado */
+  transform: rotate(14deg); /* Se rota el elemento */
+}
+
+.blush-r {
+  left: initial; /* Se restablece la posición horizontal */
+  right: 22px; /* Se ajusta la posición horizontal */
+  transform: rotate(-14deg); /* Se rota el elemento */
+}
+.mouth {
+  position: absolute; /* Se posiciona de forma absoluta */
+  top: 60%; /* Se ajusta la posición vertical */
+  left: 50%; /* Se ajusta la posición horizontal */
+  transform: translate(-50%); /* Se centra horizontalmente */
+  width: 42px; /* Se establece el ancho */
+  height: 45px; /* Se establece la altura */
+  background-color: #844f54; /* Se establece el color de fondo */
+  border: 5px solid; /* Se establece el borde con un ancho de 5px y sólido */
+  border-radius: 8px 8px 50% 50%; /* Se establece el radio de borde */
+  display: flex; /* Se utiliza el modelo de caja flexible */
+  align-items: flex-end; /* Se alinean los elementos al final del contenedor */
+  justify-content: center; /* Se centran horizontalmente los elementos */
+}
+
+.mouth::before {
+  content: ""; /* Se agrega contenido pseudo-elemento */
+  width: 30px; /* Se establece el ancho */
+  height: 20px; /* Se establece la altura */
+  background-color: #f2676a; /* Se establece el color de fondo */
+  border-radius: 50%; /* Se establece el radio de borde para hacer más redondeado */
+  outline: 5px solid; /* Se establece un borde exterior de 5px */
+}
+
+.arm {
+  position: absolute; /* Se posiciona de forma absoluta */
+  top: 30%; /* Se ajusta la posición vertical */
+  left: -50px; /* Se ajusta la posición horizontal */
+  width: 100px; /* Se establece el ancho */
+  height: 70px; /* Se establece la altura */
+  background-color: #f38da4; /* Se establece el color de fondo */
+  border: 5px solid; /* Se establece el borde con un ancho de 5px y sólido */
+  border-radius: 50%; /* Se establece el radio de borde para hacer más redondeado */
+  transform: rotate(44deg); /* Se rota el elemento */
+  z-index: -1; /* Se establece el índice z para colocarlo detrás de otros elementos */
+}
+
+.arm-r {
+  left: initial; /* Se restablece la posición horizontal */
+  right: -50px; /* Se ajusta la posición horizontal */
+  top: 36%; /* Se ajusta la posición vertical */
+}
+
+.patas {
+  position: absolute; /* Se posiciona de forma absoluta */
+  bottom: -11px; /* Se ajusta la posición vertical */
+  left: -16px; /* Se ajusta la posición horizontal */
+  width: 140px; /* Se establece el ancho */
+  height: 80px; /* Se establece la altura */
+  background-color: #cd1956; /* Se establece el color de fondo */
+  border: 5px solid; /* Se establece el borde con un ancho de 5px y sólido */
+  border-radius: 50%; /* Se establece el radio de borde para hacer más redondeado */
+  z-index: -1; /* Se establece el índice z para colocarlo detrás de otros elementos */
+}
+
+.patas::before {
+  content: ""; /* Se agrega contenido pseudo-elemento */
+  position: absolute; /* Se posiciona de forma absoluta */
+  left: 5px; /* Se ajusta la posición horizontal */
+  bottom: 20px; /* Se ajusta la posición vertical */
+  width: 30px; /* Se establece el ancho */
+  height: 30px; /* Se establece la altura */
+  border-radius: 50%; /* Se establece el radio de borde para hacer más redondeado */
+  background-color: #f06675; /* Se establece el color de fondo */
+  transform: rotate(228deg); /* Se rota el elemento */
+}
+
+.patas-r {
+  left: initial; /* Se restablece la posición horizontal */
+  right: -16px; /* Se ajusta la posición horizontal */
+}
+
+.patas-r::before {
+  left: initial; /* Se restablece la posición horizontal */
+  right: 5px; /* Se ajusta la posición horizontal */
+  transform: rotate(-228deg); /* Se rota el elemento */
+}
+

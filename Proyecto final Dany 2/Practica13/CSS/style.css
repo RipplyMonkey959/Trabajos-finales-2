@@ -1,0 +1,20 @@
+/*El asterisco indica que todos los elementos se verán afectados bajo los atributos establecidos*/
+* {
+    margin: 0; /* Elimina el margen exterior */
+    align-items: center; /* Alinea los elementos hijos verticalmente */
+    font-family: 'Courier New', Courier, monospace; /* Establece la fuente */
+    font-weight: 400; /* Establece el peso de la fuente */
+    font-style: normal; /* Establece el estilo de la fuente */
+}
+
+/* Estilos para el elemento canvas */
+canvas {
+    width: 100%; /* Ancho del canvas al 100% del contenedor */
+    height: 565px; /* Altura fija del canvas */
+}
+
+/* Estilos para el canvas con ID gameCanvas */
+#gameCanvas {
+    background-image: url(/IMG/Fondo.png); /* Establece la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+}

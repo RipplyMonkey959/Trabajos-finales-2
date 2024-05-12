@@ -1,0 +1,51 @@
+body{ /*Se se va a trabajar en el cuerpo de la pagina */
+  background: rgb(63,94,251);  /* Fondo azul */
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,7,107,1)100%); /* Fondo degradado que va desde azul a rosa */
+  font-family: sans-serif; /* Fuente predeterminada */
+  color: white;   /* Color de texto blanco */
+} /*Cierre*/
+main{ /* Estilos para el contenedor principal */
+  width: 730px; /* Ancho fijo y centrado horizontalmente */
+  margin: 100px auto 50px; /* Margen superior de 100px, margen inferior de 50px, centrado horizontal */
+  display: flex; /* Flexbox para alinear elementos internos */
+  align-items: center; /* Alinea los elementos internos verticalmente */
+} /*Cierre*/
+.section1{ /* Estilos para la primera sección del juego */
+  background-color: rgba(255, 255, 255, 0.2);  /* Fondo semi-transparente blanco */
+  padding: 0 10px 10px 10px; /* Espaciado interno */
+  border-radius: 8px;  /* Bordes redondeados */
+} /*Cierre*/
+h1{ /* Estilos para los títulos */
+  text-align: center; /* Texto centrado */
+}/*Cierre*/
+button{ /* Estilos para los botones del juego */
+  height: 100px; /*Tamaño del ancho del boton*/
+  width:  100px;/*Tamaño de lo largo del boton*/
+  font-size: 40px; /* Tamaño de fuente grande y negrita */
+  color: black; /*Tipo de color*/
+  font-weight: bold; /* Color de texto negro */
+} /*Cierre*/
+button:hover{ /* Estilos cuando se pasa el mouse sobre los botones */
+  cursor: pointer; /* Cambia el cursor a una mano */
+} /*Cierre*/
+.section2{ /* Estilos para la segunda sección del juego */
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente blanco */
+  border-top-right-radius: 8px; /* Bordes redondeados en la esquina superior derecha e inferior derecha */
+  border-bottom-right-radius: 8px; /* Bordes redondeados en la esquina superior derecha e inferior derecha */
+  width: 250px; /*Anchura fija*/
+  height: 400px; /*Altura fija*/
+  padding: 0 20px; /* Espaciado interno */
+} /*Cierre*/
+.estadisticas{ /* Estilos para las estadísticas */
+  border: 1px solid white; /* Borde blanco sólido */
+  height: 105px; /*Tamaño de la altura*/
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 8px 20px; /* Espaciado interno */
+  box-sizing: border-box;   /* Caja de dimensiones */
+}/*Cierre*/
+footer{ /* Estilos para el pie de página */
+  text-align: center;  /* Texto centrado */
+} /*Cierre*/
+a{ /* Estilos para los enlaces */
+  text-decoration: none; /* Sin decoración */
+} /*Cierre*/
